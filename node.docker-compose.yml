@@ -1,0 +1,12 @@
+version: '1'
+services:
+  node:
+    build: 
+    context: ./lukather-discography
+    command: bash start_server.sh
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./lukather-discography:/usr/src/app
+    working_dir: /usr/src/app
+
